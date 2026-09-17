@@ -1,47 +1,41 @@
-📖 NovelHub: Modern Digital Reading Platform
-NovelHub adalah aplikasi platform baca novel digital yang dirancang untuk memberikan pengalaman membaca yang mulus bagi pengguna, serta menyediakan alat manajemen konten yang komprehensif bagi penulis dan moderator (admin). Proyek ini dikembangkan dengan pendekatan full-stack menggunakan Flutter untuk sisi mobile dan Laravel untuk backend RESTful API.
+NovelHub: Modern Digital Reading Platform
+NovelHub is a cross-platform digital novel reading application engineered to deliver a seamless reading experience for users while providing robust content management tools for authors and administrators. Built with a modern full-stack architecture, this project leverages Flutter for the mobile frontend and Laravel for the backend RESTful API.
 
-🚀 Mengapa Proyek Ini?
-Aplikasi ini dibangun untuk menyelesaikan masalah fragmentasi konten dalam platform bacaan, dengan menerapkan sistem Role-Based Access Control (RBAC) yang ketat untuk menjaga kualitas dan integritas konten di platform.
+Motivation & Problem Statement
+The platform was built to address content fragmentation in digital reading spaces by enforcing strict Role-Based Access Control (RBAC). This architecture ensures high-quality content curation, protects platform integrity, and maintains clear operational boundaries between readers, creators, and moderators.
 
-🛠️ Tech Stack & Arsitektur
-Proyek ini mengadopsi standar pengembangan perangkat lunak modern:
-
+🛠️ Tech Stack & Architecture
 Frontend (Mobile): Flutter (Dart)
 
-Backend (API): Laravel 12 (PHP)
+Backend (REST API): Laravel 12 (PHP)
 
 Database: MySQL
 
-Authentication: Laravel Sanctum (Token-based API Authentication)
+Authentication: Laravel Sanctum (Token-Based API Authentication)
 
-Architecture: RESTful API, MVC Pattern, 
+Design Patterns: RESTful API Architecture, MVC Pattern, Controller-Service-Model Pattern
 
-🎯 Fitur Utama
-Sistem ini dirancang dengan segmentasi akses pengguna untuk memastikan alur kerja yang efisien:
+🎯 Key Features
+👤 Reader (User)
+Content Discovery: Browse and search through available novel libraries.
 
-👤 Pengguna (Reader)
-Content Discovery: Menjelajahi daftar novel yang tersedia.
+Personalization: Add preferred novels to a personal Favorites list.
 
-Personalization: Menambahkan novel ke daftar Favorit pribadi.
-
-Reading Progress: Fitur Bookmark per chapter untuk melanjutkan bacaan dari titik terakhir.
+Reading Progress: Chapter-level bookmarking to seamlessly resume reading from where you left off.
 
 ✍️ Author
-Full Lifecycle Content Management: Membuat, membaca, memperbarui, dan menghapus novel serta chapter secara mandiri.
-
-
+Content Lifecycle Management: Full CRUD (Create, Read, Update, Delete) capabilities for managing novels and chapters independently.
 
 🛡️ Administrator
-Content Moderation: Mengubah status novel (Draft vs Published). Draft & Publish Control: Mengelola draf novel sebelum dipublikasikan ke publik.
+Content Moderation: Publish or unpublish works by toggling statuses between Draft and Published.
 
-Quality Assurance: Menghapus novel yang dianggap tidak layak (tidak wajar) untuk menjaga integritas komunitas.
+Quality Assurance: Review drafts and remove inappropriate or policy-violating content to maintain community standards.
 
-⚙️ Highlight Teknis untuk Recruiter
-Secure API: Implementasi autentikasi API yang aman menggunakan Laravel Sanctum untuk melindungi endpoint sensitif.
+⚙️ Technical Highlights (For Recruiters)
+Secure API Integration: Stateful and stateless API security using Laravel Sanctum to guard sensitive endpoints.
 
-RBAC Implementation: Middleware kustom untuk memisahkan logika akses antara User, Author, dan Admin.
+Custom RBAC Middleware: Fine-grained authorization layer segregating access permissions across Readers, Authors, and Admins.
 
-Clean Database Design: Struktur database yang dinormalisasi untuk mendukung relasi kompleks antara User, Novel, Chapter, dan Favorit.
+Normalized Database Schema: Designed for relational integrity supporting complex interactions across Users, Novels, Chapters, and Favorites.
 
-Scalable Architecture: Kode backend yang terstruktur dengan Controller-Service-Model untuk memudahkan maintenance.
+Scalable Codebase: Clean backend abstraction using a Service-Oriented Approach to streamline long-term maintainability.
